@@ -1,6 +1,6 @@
-﻿using Dalamud.IoC;
+﻿using Dalamud.Game;
+using Dalamud.IoC;
 using Dalamud.Plugin;
-using Dalamud.Game;
 using Dalamud.Plugin.Services;
 
 namespace DrahsidLib;
@@ -17,9 +17,9 @@ public class Service {
     [PluginService] public static IKeyState KeyState { get; private set; } = null!;
     [PluginService] public static IObjectTable ObjectTable { get; private set; } = null!;
     [PluginService] public static ITargetManager TargetManager { get; private set; } = null!;
+    [PluginService] public static ITargetManager Targets { get; private set; } = null!;
     [PluginService] public static IJobGauges JobGauges { get; private set; } = null!;
     [PluginService] public static ISigScanner SigScanner { get; private set; } = null!;
-    [PluginService] public static ITargetManager Targets { get; private set; } = null!;
     [PluginService] public static IPluginLog Logger { get; private set; } = null!;
     [PluginService] public static IGameInteropProvider GameInteropProvider { get; private set; } = null!;
     //[PluginService] public static IGameNetwork Network { get; private set; } = null!;
